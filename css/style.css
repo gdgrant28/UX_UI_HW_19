@@ -233,3 +233,73 @@ footer {
     color: #333; 
   }
   
+
+  /* Define the animation */
+@keyframes slideFromRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Apply the animation to the hero-content */
+.hero-content {
+  animation: slideFromRight 1s ease forwards;
+}
+
+/* Define the animation */
+@keyframes topDown {
+  from {
+      transform: translateY(-100%);
+  }
+  to {
+      transform: translateY(0);
+  }
+}
+
+/* Apply the animation to the header */
+.top-down {
+  animation: topDown 0.5s ease-in-out;
+}
+
+@keyframes wiggle {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-5deg);
+  }
+  50% {
+    transform: rotate(5deg);
+  }
+  75% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+/* Apply the animation on hover */
+li:hover {
+  animation: wiggle 0.5s ease-in-out;
+}
+
+/* Other styles */
+ul {
+  list-style-type: none;
+}
+
+li {
+  display: inline-block;
+  padding: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
